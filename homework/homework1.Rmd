@@ -53,10 +53,10 @@ move pages. Hit 'q' to quit.
 
 For the most recent commit, fill out the following information:
 
-* Commit id:
-* Author:
-* Date:
-* Message:
+* Commit id:a9e58afd6af370ded27987703b97318d2506e14b
+* Author:Jasmine Liu<shanyu@umich.edu>
+* Date:Tue Sep 13 10:23:43 2022 -0400
+* Message: Update homework1. Rmd
 
 Commit ids are usually very long, but you really only need the first 5 or so
 characters to identify them. Verify this using `git show --name-only FULLID` and
@@ -68,12 +68,13 @@ info. Use `git show --name-only 14e2c4b` (you can also use your previous commit
 if you already started this question).  What files where changed in this commit?
 
 > YOUR ANSWER
+lab*_files
 
 Run `git show FIRSTFIVE`. What do you think this is telling you? What do you
 think a line with a `+` means? What would a `-` mean?
 
 > YOUR ANSWER
-
+It provides an instruction for me to use this command correctly.
 
 ### Commiting to your local repository
 
@@ -82,6 +83,8 @@ By this point you have made some changes to this file. Save the file.
 Go to the *Terminal* and type `git status`. What is this telling your?
 
 > YOUR ANSWER
+It's telling me that my branch is ahead of 'main' by 1 commit. 
+and the changes hasn't been staged for commit.
 
 Use `git add` to place your changes in the staging area. Type `git status` again
 to see what happened.
@@ -302,7 +305,7 @@ Here is plot of median prices over time, attempting to breakdown the data by
 region.
 
 ```{r fig.height = 10}
-ggplot(txhousing, aes(x = date, y = median, color = city)) + 
+ggplot(txhousing, aes(x = city, y = median, color = city)) + 
   geom_point() + 
   theme(legend.position="bottom")
 ```
