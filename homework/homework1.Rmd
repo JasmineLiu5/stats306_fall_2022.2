@@ -69,13 +69,15 @@ info. Use `git show --name-only 14e2c4b` (you can also use your previous commit
 if you already started this question).  What files where changed in this commit?
 
 > YOUR ANSWER
-lab*_files
+lab*_files to .gitignore.
 
 Run `git show FIRSTFIVE`. What do you think this is telling you? What do you
 think a line with a `+` means? What would a `-` mean?
 
 > YOUR ANSWER
-It provides an instruction for me to use this command correctly.
+It provides me the information about this commit.
+a line with a "+" means
+a line with a "-" means
 
 ### Commiting to your local repository
 
@@ -98,13 +100,20 @@ Now add your homework back to the staging area and commit it with `git commit -m
 
 ```
 
+
 ```
 
 Demonstrate that you had a commit message using `git show --name-only HEAD` and
 putting the results below. `HEAD` is shorthand for "the most recent commit".
 
 ```
+commit ead701c1d468cfebdbae7bc4d9ac3de5ea12535a (HEAD -> main)
+Author: Jasmine Liu <shanyu@umich.edu>
+Date:   Tue Sep 20 11:00:54 2022 -0400
 
+    Question 1
+
+homework/homework1.Rmd
 ```
 
 If you forgot to include a commit message the first time, you can **amend**
@@ -117,7 +126,7 @@ if you left them out of your staging area.
 In the following box, write a sentence with a spelling or grammar mistake.
 
 ```
-
+I dont like wtcing TV.
 ```
 
 Use `git add` and `git commit` to commit this change. Include the commit ID:
