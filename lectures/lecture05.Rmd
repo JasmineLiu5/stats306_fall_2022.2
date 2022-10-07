@@ -40,8 +40,13 @@ aatemp <- read_csv("../data/ann_arbor_weather.csv.gz")
 ## Plotting temperature vs. time
 
 ```{r}
-ggplot(data = aatemp, aes(x = DATE, y = TMAX)) +
-  geom_line()
+mutate(aatemp, newT=TMAX-mean(TMAX))|>
+  summarize(mean(newT))
+```
+```{r}
+group_by(aatemp,year(DATE))|>
+  mutate(newT=TMAX-mean(TMAX))|>
+  summarize(mean(newT))
 ```
 
 ## Days with large temp jumps
