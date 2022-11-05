@@ -2,9 +2,10 @@
 title: "Stats 306: Lecture 9"
 subtitle: "Exploratory Data Analysis"
 author: "Mark Fredrickson"
-output: 
-  slidy_presentation:
-    incremental: true
+output:
+  learnr::tutorial:
+    progressive: true
+    css: css/lecture.css
 runtime: shiny_prerendered
 ---
 
